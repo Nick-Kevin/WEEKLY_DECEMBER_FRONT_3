@@ -32,7 +32,7 @@ function App() {
   const thirdRowInHeader = () => {
     return (
       <Button 
-        className="f-bold text-sm border-black border-2 mt-2 px-10 py-5 guide-shadow-2 border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black"
+        className="f-bold text-sm border-black border-2 mt-4 px-7 lg:px-10 py-3 lg:py-5 guide-shadow-2 border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black"
         label="SUBSCRIBE"
       />
     )
@@ -42,7 +42,7 @@ function App() {
     <>
       <StickyNavbar/>
       <FlexColThreeRows
-        otherClass = "mt-8 lg:mt-11 gap-y-10"
+        otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-7 lg:gap-y-10"
         firstRow = {firstRowInHeader()}
         secondRow = {secondRowInHeader()}
         thirdRow = {thirdRowInHeader()}
