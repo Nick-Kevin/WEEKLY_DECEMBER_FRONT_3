@@ -14,8 +14,8 @@ function ActiveSlider () {
         <div className="flex items-center justify-center mt-28 flex-col bg-[#6c34af]">
             <Swiper
                 breakpoints={{
-                    768: {
-                      slidesPerView: 2,
+                    10: {
+                      slidesPerView: 1.57,
                       spaceBetween: 15,
                     },
                     1024: {
@@ -25,7 +25,7 @@ function ActiveSlider () {
                 }}
                 freeMode={true}
                 modules={[FreeMode, Pagination]}
-                className="max-w-[100%] lg:max-w-[100%] px-16"
+                className="max-w-[100%] lg:max-w-[100%] px-4 lg:px-16"
             >
                 <SwiperSlide>
                     <CoverCard
