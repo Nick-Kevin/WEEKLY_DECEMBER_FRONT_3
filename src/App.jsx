@@ -7,6 +7,7 @@ import FlexColThreeRows from './components/FlexColThreeRows'
 import Button from './components/Button'
 import ShapeWirl from './assets/header/shape-swirl.svg'
 import Star1 from './assets/header/star.svg'
+import StarsGroup from './assets/header/group.png'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -45,7 +46,7 @@ function App() {
       <div className="relative">
         <StickyNavbar/>
         <FlexColThreeRows
-          otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-7 lg:gap-y-10"
+          otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-7 relative z-20 lg:gap-y-10"
           firstRow = {firstRowInHeader()}
           secondRow = {secondRowInHeader()}
           thirdRow = {thirdRowInHeader()}
@@ -60,6 +61,11 @@ function App() {
           className = "absolute top-80 w-10 opacity-50 lg:opacity-100 lg:w-auto left-4 lg:left-64 lg:mt-4"
           alt = "star"
         />
+        <img
+          src = {StarsGroup}
+          className = "absolute opacity-20 lg:opacity-100 z-0 w-20 lg:w-auto top-52 right-4 lg:right-14"
+          alt = "stars group"
+        />     
       </div>
     </>
   )
