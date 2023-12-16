@@ -28,7 +28,7 @@ import CovidVector from '../assets/header/covers/covid19-endemic/vector.png'
 
 function ActiveSlider () {
     return (
-        <div className="flex items-center justify-center mt-28 flex-col bg-[#6c34af]">
+        <div className="flex items-center justify-center mt-12 lg:mt-28 flex-col">
             <Swiper
                 breakpoints={{
                     10: {
@@ -42,7 +42,7 @@ function ActiveSlider () {
                 }}
                 freeMode={true}
                 modules={[FreeMode, Pagination]}
-                className="max-w-[100%] lg:max-w-[100%] px-4 lg:px-16"
+                className="max-w-[100%] lg:max-w-[100%] px-4 lg:px-9"
             >
                 <SwiperSlide>
                     <CoverCard
