@@ -65,7 +65,7 @@ export default function StickyNavbar() {
               <Button
                 variant="gradient"
                 size="sm"
-                className="hidden f-bold text-sm border-black border-2 mb-3 px-5 ml-4 guide-shadow border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black"
+                className="hidden f-bold text-sm border-black border-2 px-5 ml-4 guide-shadow border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black"
               >
                 <span>SUBSCRIBE</span>
               </Button>
