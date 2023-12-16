@@ -1,5 +1,8 @@
 :root {
   --main-color: rgba(247, 237, 232, 1);
+  --second-color: rgba(205, 70, 49, 1);
+  --davys-grey: rgba(77, 77, 77, 1);
+
 }
 
 #root {
@@ -13,9 +16,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -51,6 +56,14 @@
   color: black;
 }
 
+.red-text {
+  color: var(--second-color);
+}
+
+.grey-text, p {
+  color: var(--davys-grey);
+}
+
 .none-border {
   border: none !important;
 }
@@ -65,4 +78,8 @@
 
 .guide-shadow {
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25)
+}
+
+.guide-shadow-2 {
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.25)
 }
