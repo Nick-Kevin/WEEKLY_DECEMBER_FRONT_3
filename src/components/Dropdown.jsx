@@ -9,9 +9,9 @@ function classNames(...classes) {
 
 export default function Dropdown() {
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="relative w-full inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-28 text-black none-border no-padding-left gap-x-1.5 rounded-md bg-transparent">
+        <Menu.Button className="inline-flex w-full py-1 lg:w-28 text-black none-border no-padding-left gap-x-1.5 rounded-md bg-transparent">
           More
           <img src={arrowDown} alt="arrow down" />
         </Menu.Button>
