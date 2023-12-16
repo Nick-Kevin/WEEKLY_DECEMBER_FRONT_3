@@ -3,11 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import StickyNavbar from './components/StickyNavbar'
+
 import FlexColThreeRows from './components/FlexColThreeRows'
 import Button from './components/Button'
 import ShapeWirl from './assets/header/shape-swirl.svg'
 import Star1 from './assets/header/star.svg'
 import StarsGroup from './assets/header/group.png'
+
+import ActiveSlider from './components/ActiveSlider'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -67,6 +70,7 @@ function App() {
           alt = "stars group"
         />     
       </div>
+      <ActiveSlider/>
     </>
   )
 }
