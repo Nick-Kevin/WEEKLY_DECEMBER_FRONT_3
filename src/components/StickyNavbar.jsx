@@ -27,7 +27,7 @@ export default function StickyNavbar() {
         variant="small"
         className="p-1 f-bold mr-6 text-md"
       >
-        <a href="#" className="flex black items-center">
+        <a href="#" className="flex black items-center hover:underline hover:text-black">
           Episodes
         </a>
       </Typography>
@@ -35,7 +35,7 @@ export default function StickyNavbar() {
         as="li"
         className="p-1 f-bold mr-6 text-md"
       >
-        <a href="#" className="flex black items-center">
+        <a href="#" className="flex black items-center hover:underline hover:text-black">
           About
         </a>
       </Typography>
@@ -58,16 +58,16 @@ export default function StickyNavbar() {
               <Button
                 variant="text"
                 size="sm"
-                className="hidden lg:inline-block"
+                className="hidden f-bold text-sm border-black border-2 px-5 border-solid lg:inline-block hover:bg-black hover:text-white hover:border-black"
               >
-                <span>Log In</span>
+                <span>RECENT EPISODES</span>
               </Button>
               <Button
                 variant="gradient"
                 size="sm"
-                className="hidden lg:inline-block"
+                className="hidden f-bold text-sm border-black border-2 px-5 ml-4 guide-shadow border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black"
               >
-                <span>Sign in</span>
+                <span>SUBSCRIBE</span>
               </Button>
             </div>
             <IconButton
@@ -111,12 +111,12 @@ export default function StickyNavbar() {
         </div>
         <MobileNav open={openNav}>
           {navList}
-          <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="text" size="sm" className="">
-              <span>Log In</span>
+          <div className="flex flex-col items-center gap-x-1">
+            <Button fullWidth variant="text" size="sm" className="f-bold text-sm border-black border-2 px-5 border-solid lg:inline-block hover:bg-black hover:text-white hover:border-black">
+              <span>RECENT EPISODES</span>
             </Button>
-            <Button fullWidth variant="gradient" size="sm" className="">
-              <span>Sign in</span>
+            <Button fullWidth variant="gradient" size="sm" className="f-bold text-sm border-black border-2 px-5 mt-5 guide-shadow border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black">
+              <span>SUBSCRIBE</span>
             </Button>
           </div>
         </MobileNav>
