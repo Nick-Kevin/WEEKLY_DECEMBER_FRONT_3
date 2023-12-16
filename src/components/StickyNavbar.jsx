@@ -24,30 +24,26 @@ export default function StickyNavbar() {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex black items-center">
           Episodes
         </a>
       </Typography>
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+        className="p-1 font-bold"
       >
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex black items-center">
           About
         </a>
       </Typography>
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex black items-center">
           More
         </a>
       </Typography>

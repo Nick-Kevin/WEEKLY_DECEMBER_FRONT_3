@@ -46,3 +46,7 @@
 .bg-main-color, body {
   background-color: var(--main-color);
 }
+
+.black {
+  color: black;
+}
