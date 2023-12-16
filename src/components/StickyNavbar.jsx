@@ -27,7 +27,7 @@ export default function StickyNavbar() {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-          Pages
+          Episodes
         </a>
       </Typography>
       <Typography
@@ -37,7 +37,7 @@ export default function StickyNavbar() {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-          Account
+          About
         </a>
       </Typography>
       <Typography
@@ -47,17 +47,7 @@ export default function StickyNavbar() {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-          Blocks
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Docs
+          More
         </a>
       </Typography>
     </ul>
@@ -73,7 +63,7 @@ export default function StickyNavbar() {
           >
             Material Tailwind
           </Typography>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center w-full justify-between gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-1">
               <Button
