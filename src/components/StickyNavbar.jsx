@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from '../assets/logo.svg'
 import {
   Navbar,
   MobileNav,
@@ -54,16 +55,10 @@ export default function StickyNavbar() {
   );
  
   return (
-      <Navbar className="sticky top-0 z-10 max-w-full rounded-none px-4 py-2 md:px-16 lg:px-24 lg:py-2">
+      <Navbar className="sticky top-0 z-10 max-w-full rounded-none px-4 md:px-24 lg:px-32 py-6">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="#"
-            className="mr-4 cursor-pointer py-1.5 font-medium"
-          >
-            Material Tailwind
-          </Typography>
-          <div className="flex items-center w-full justify-between gap-4">
+          <img src={Logo} className="w-11 md:w-14 lg:w-16" alt="logo"/>
+          <div className="flex items-center ml-32 w-full justify-between gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-1">
               <Button
