@@ -21,6 +21,8 @@ import SectionHeader from './components/SectionHeader'
 import Illustration from './components/Illustration'
 import illustration1 from './assets/about/Illustration-1.svg'
 import illustration2 from './assets/about/Illustration-2.svg'
+import johnSmith from './assets/about/avatar.png'
+import spotifyLogo2 from './assets/about/Spotify.svg'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -80,6 +82,42 @@ function App() {
     )
   }
 
+  const thirdRowInAbout = () => {
+    const firstRow = () => {
+      return (<h3 className="lg:text-9xl text-6xl red-text">“</h3>)
+    }
+
+    const secondRow = () => {
+      return (<h3 className="text-2xl lg:text-4xl !leading-tight f-bold">One of the best daily podcasts that covers every topic on Spotify.</h3>)
+    }
+
+    const thirdRow = () => {
+      return (
+        <div className="mt-6 flex flex-col lg:flex-row items-center gap-x-2 lg:mt-14">
+          <p className="flex items-center gap-x-2">
+            <img src={johnSmith} alt="John Smith" />
+            <span>John Smith,</span>
+          </p>
+          <p className="flex items-center text-black f-bold gap-x-2 mt-4 lg:mt-0">
+            <img src={spotifyLogo2} className="w-5" alt="spotify logo" />
+            <span>Social Community Manager</span>
+          </p>           
+        </div>
+      )
+    }
+
+    return (
+      <>
+        <FlexColThreeRows
+          otherClass = "mt-6 bg-main-color py-10 px-4 lg:px-40 mx-4 lg:mx-32 lg:mt-8 lg:mt-11 relative z-20"
+          firstRow = {firstRow()}
+          secondRow = {secondRow()}
+          thirdRow = {thirdRow()}
+        />
+      </>
+    )
+  }
+
   return (
     <>
       <div className="relative">
@@ -123,7 +161,7 @@ function App() {
             otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
             firstRow = {firstRowInAbout()}
             secondRow = {secondRowInAbout()}
-            thirdRow = {thirdRowInHeader()}
+            thirdRow = {thirdRowInAbout()}
           />
       </div>
     </>
