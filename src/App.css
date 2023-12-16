@@ -1,3 +1,7 @@
+:root {
+  --main-color: rgba(247, 237, 232, 1);
+}
+
 #root {
   width: 100%;
   text-align: center;
@@ -37,4 +41,8 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.bg-main-color, body {
+  background-color: var(--main-color);
 }
