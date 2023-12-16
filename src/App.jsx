@@ -23,10 +23,10 @@ import illustration1 from './assets/about/Illustration-1.svg'
 import illustration2 from './assets/about/Illustration-2.svg'
 import johnSmith from './assets/about/avatar.png'
 import spotifyLogo2 from './assets/about/Spotify.svg'
+import starInAbout from './assets/about/Star.png'
+import vectorInAbout from './assets/about/vector.svg'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   const firstRowInHeader = () => {
     return (
       <>
@@ -93,7 +93,7 @@ function App() {
 
     const thirdRow = () => {
       return (
-        <div className="mt-6 flex flex-col lg:flex-row items-center gap-x-2 lg:mt-14">
+        <div className="relative mt-6 flex flex-col lg:flex-row items-center gap-x-2 lg:mt-14">
           <p className="flex items-center gap-x-2">
             <img src={johnSmith} alt="John Smith" />
             <span>John Smith,</span>
@@ -101,7 +101,9 @@ function App() {
           <p className="flex items-center text-black f-bold gap-x-2 mt-4 lg:mt-0">
             <img src={spotifyLogo2} className="w-5" alt="spotify logo" />
             <span>Social Community Manager</span>
-          </p>           
+          </p>
+          <img src={starInAbout} className="absolute w-20 opacity-75 lg:opacity-100 lg:w-auto left-60 lg:left-[665px] bottom-64 lg:bottom-[265px]" alt="star" />
+          <img src={vectorInAbout} className="absolute opacity-75 lg:opacity-100 bottom-10 lg:bottom-6 w-14 lg:w-auto left-[-50px] lg:left-[-400px]" alt="vector" />         
         </div>
       )
     }
