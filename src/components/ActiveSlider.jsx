@@ -10,12 +10,21 @@ import CoverCard from "./CoverCard"
 
 import Tesla from '../assets/header/covers/tesla-autopilot/cover.png'
 import TeslaVector from '../assets/header/covers/tesla-autopilot/vector.png'
+
 import Self from '../assets/header/covers/self-confidence/cover.png'
 import SelfVector from '../assets/header/covers/self-confidence/vector.png'
+
 import PMind from '../assets/header/covers/preplexed-mind/cover.png'
 import PMindVector from '../assets/header/covers/preplexed-mind/vector.png'
+
 import Womens from '../assets/header/covers/womens-rights/cover.png'
 import WomensVector from '../assets/header/covers/womens-rights/vector.png'
+
+import Social from '../assets/header/covers/social-class/cover.png'
+import SocialVector from '../assets/header/covers/social-class/vector.png'
+
+import Covid from '../assets/header/covers/covid19-endemic/cover.png'
+import CovidVector from '../assets/header/covers/covid19-endemic/vector.png'
 
 function ActiveSlider () {
     return (
@@ -68,64 +77,20 @@ function ActiveSlider () {
                     />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer">
-                        <div
-                            className="absolute inset-0 bg-cover bg-center"
-                            style={{ background: 'blue' }}
-                        />
-                        <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-50" />
-                        <div className="relative flex flex-col gap-3">
-                            <h1 className="text-xl lg:text-2xl">blue </h1>
-                        </div>
-                    </div>
+                    <CoverCard
+                        bgUrl={Social}
+                        vector={SocialVector}
+                        vectorWidth="w-48 lg:w-auto mt-4 lg:mt-6"
+                        title="Social Class"
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer">
-                        <div
-                            className="absolute inset-0 bg-cover bg-center"
-                            style={{ background: 'blue' }}
-                        />
-                        <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-50" />
-                        <div className="relative flex flex-col gap-3">
-                            <h1 className="text-xl lg:text-2xl">blue </h1>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer">
-                        <div
-                            className="absolute inset-0 bg-cover bg-center"
-                            style={{ background: 'blue' }}
-                        />
-                        <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-50" />
-                        <div className="relative flex flex-col gap-3">
-                            <h1 className="text-xl lg:text-2xl">blue </h1>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer">
-                        <div
-                            className="absolute inset-0 bg-cover bg-center"
-                            style={{ background: 'blue' }}
-                        />
-                        <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-50" />
-                        <div className="relative flex flex-col gap-3">
-                            <h1 className="text-xl lg:text-2xl">blue </h1>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer">
-                        <div
-                            className="absolute inset-0 bg-cover bg-center"
-                            style={{ background: 'blue' }}
-                        />
-                        <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-50" />
-                        <div className="relative flex flex-col gap-3">
-                            <h1 className="text-xl lg:text-2xl">blue </h1>
-                        </div>
-                    </div>
+                    <CoverCard
+                        bgUrl={Covid}
+                        vector={CovidVector}
+                        vectorWidth="w-40 lg:w-auto"
+                        title="Covid-19 Endemic"
+                    />
                 </SwiperSlide>
             </Swiper>
         </div>
