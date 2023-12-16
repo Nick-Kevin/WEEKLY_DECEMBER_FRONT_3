@@ -17,6 +17,8 @@ import spotifyLogo from './assets/header/logos/Spotify.svg'
 import googlePodcastLogo from './assets/header/logos/Google-Podcast.svg'
 import curlVector from './assets/utils/vector.svg'
 
+import SectionHeader from './components/SectionHeader'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -46,6 +48,17 @@ function App() {
         className="f-bold text-sm border-black border-2 mt-4 px-7 lg:px-10 py-3 lg:py-5 guide-shadow-2 border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black"
         label="SUBSCRIBE"
       />
+    )
+  }
+
+  const firstRowInAbout = () => {
+    return (
+      <>
+        <SectionHeader
+          title="Talk. Listen. Get inspired by every minute of it."
+          titleClass="w-7/12"
+        />
+      </>
     )
   }
 
@@ -87,8 +100,13 @@ function App() {
         </div>
         <img src={curlVector} className="absolute bottom-[-75px] left-[47%] lg:bottom-[-205px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
-      <div className="h-96 bg-white">
-
+      <div className="bg-white py-28">
+        <FlexColThreeRows
+            otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-7 relative z-20 lg:gap-y-10"
+            firstRow = {firstRowInAbout()}
+            secondRow = {secondRowInHeader()}
+            thirdRow = {thirdRowInHeader()}
+          />
       </div>
     </>
   )
