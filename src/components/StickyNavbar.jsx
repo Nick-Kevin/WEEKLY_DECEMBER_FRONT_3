@@ -65,7 +65,7 @@ export default function StickyNavbar() {
               <Button
                 variant="gradient"
                 size="sm"
-                className="hidden f-bold text-sm border-black border-2 px-5 ml-4 guide-shadow border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black"
+                className="hidden f-bold text-sm border-black border-2 mb-3 px-5 ml-4 guide-shadow border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black"
               >
                 <span>SUBSCRIBE</span>
               </Button>
@@ -82,7 +82,7 @@ export default function StickyNavbar() {
                   fill="none"
                   className="h-6 w-6"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
+                  stroke="black"
                   strokeWidth={2}
                 >
                   <path
@@ -96,7 +96,7 @@ export default function StickyNavbar() {
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="black"
                   strokeWidth={2}
                 >
                   <path
