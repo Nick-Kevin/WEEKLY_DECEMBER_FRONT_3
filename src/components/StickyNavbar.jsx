@@ -8,6 +8,7 @@ import {
   IconButton,
   Card,
 } from "@material-tailwind/react";
+import Dropdown from "./dropdown";
  
 export default function StickyNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -20,11 +21,11 @@ export default function StickyNavbar() {
   }, []);
  
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mt-2 mb-4 flex flex-col lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
         variant="small"
-        className="p-1 font-normal"
+        className="p-1 f-bold mr-6 text-md"
       >
         <a href="#" className="flex black items-center">
           Episodes
@@ -32,8 +33,7 @@ export default function StickyNavbar() {
       </Typography>
       <Typography
         as="li"
-        variant="small"
-        className="p-1 font-bold"
+        className="p-1 f-bold mr-6 text-md"
       >
         <a href="#" className="flex black items-center">
           About
@@ -41,17 +41,15 @@ export default function StickyNavbar() {
       </Typography>
       <Typography
         as="li"
-        className="p-1 font-normal"
+        className="p-1 f-bold text-md"
       >
-        <a href="#" className="flex black items-center">
-          More
-        </a>
+        <Dropdown/>
       </Typography>
     </ul>
   );
  
   return (
-      <Navbar className="sticky top-0 z-10 max-w-full bg-main-color rounded-none px-4 md:px-24 lg:px-32 py-6">
+      <Navbar className="sticky top-0 z-10 max-w-full bg-main-color rounded-none px-8 md:px-24 lg:px-32 py-6">
         <div className="flex items-center justify-between text-blue-gray-900">
           <img src={Logo} className="w-11 md:w-14 lg:w-16" alt="logo"/>
           <div className="flex items-center ml-32 w-full justify-between gap-4">
