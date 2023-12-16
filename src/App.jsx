@@ -18,6 +18,9 @@ import googlePodcastLogo from './assets/header/logos/Google-Podcast.svg'
 import curlVector from './assets/utils/vector.svg'
 
 import SectionHeader from './components/SectionHeader'
+import Illustration from './components/Illustration'
+import illustration1 from './assets/about/Illustration-1.svg'
+import illustration2 from './assets/about/Illustration-2.svg'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -56,9 +59,24 @@ function App() {
       <>
         <SectionHeader
           title="Talk. Listen. Get inspired by every minute of it."
-          titleClass="w-7/12"
+          titleClass="w-full lg:w-7/12"
         />
       </>
+    )
+  }
+
+  const secondRowInAbout = () => {
+    return (
+      <div className="w-full flex justify-between gap-x-5 lg:gap-x-40 mx-4 lg:mx-32">
+        <Illustration
+          img={illustration1}
+          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. "
+        />
+        <Illustration
+          img={illustration2}
+          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. "
+        />
+      </div>
     )
   }
 
@@ -100,11 +118,11 @@ function App() {
         </div>
         <img src={curlVector} className="absolute bottom-[-75px] left-[47%] lg:bottom-[-205px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
-      <div className="bg-white py-28">
+      <div className="bg-white py-10 lg:py-28">
         <FlexColThreeRows
-            otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-7 relative z-20 lg:gap-y-10"
+            otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
             firstRow = {firstRowInAbout()}
-            secondRow = {secondRowInHeader()}
+            secondRow = {secondRowInAbout()}
             thirdRow = {thirdRowInHeader()}
           />
       </div>
