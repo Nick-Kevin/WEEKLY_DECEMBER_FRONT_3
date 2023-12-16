@@ -12,6 +12,10 @@ import StarsGroup from './assets/header/group.png'
 
 import ActiveSlider from './components/ActiveSlider'
 
+import youtubeLogo from './assets/header/logos/Youtube.svg'
+import spotifyLogo from './assets/header/logos/Spotify.svg'
+import googlePodcastLogo from './assets/header/logos/Google-Podcast.svg'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -68,9 +72,17 @@ function App() {
           src = {StarsGroup}
           className = "absolute opacity-20 lg:opacity-100 z-0 w-20 lg:w-auto top-52 right-4 lg:right-14"
           alt = "stars group"
-        />     
+        />   
       </div>
       <ActiveSlider/>
+      <div className="flex flex-col lg:flex-row bb-1 bt-1 justify-between py-4 my-12 lg:my-32 lg:py-11 mx-4 lg:mx-32">
+        <h3 class="f-bold text-xl">Supported by:</h3>
+        <div className="flex justify-between mt-6 lg:mt-0 lg:gap-x-28 border-top-black border-top-solid boder-top-1">          
+          <img src={spotifyLogo} className="w-16 lg:w-auto" alt="logo spotify" />
+          <img src={googlePodcastLogo} className="w-24 lg:w-auto" alt="logo spotify" />
+          <img src={youtubeLogo} className="w-16 lg:w-auto" alt="logo youtube" />
+        </div>
+      </div>
     </>
   )
 }

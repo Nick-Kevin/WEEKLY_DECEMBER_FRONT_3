@@ -3,6 +3,7 @@
   --second-color: rgba(205, 70, 49, 1);
   --davys-grey: rgba(77, 77, 77, 1);
   --pewter-blue: rgba(129, 173, 200, 1);
+  --line: 1px solid black;
 }
 
 #root {
@@ -78,6 +79,14 @@
 
 .border-1 {
   border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.bt-1 {
+  border-top: var(--line);
+}
+
+.bb-1 {
+  border-bottom: var(--line);
 }
 
 .guide-shadow {
