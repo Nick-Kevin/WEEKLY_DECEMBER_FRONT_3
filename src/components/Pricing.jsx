@@ -34,16 +34,16 @@ function Pricing () {
 		},
 	]
 	return (
-		<div className="grid lg:grid-cols-3 lg:mx-32 lg:gap-x-5">
+		<div className="grid lg:grid-cols-3 mx-4 lg:mx-32 lg:gap-x-5">
 				{
 					pricing.map((priceItem, indexPrice) => (
-						<div key={indexPrice} className="text-start">
-							<div className={`flex flex-col justify-between border-black lg:mt-5 lg:h-80 rounded-lg lg:p-7 ${
+						<div key={indexPrice} className="text-start mt-8 lg:mt-0">
+							<div className={`flex flex-col justify-between border-black lg:mt-5 lg:h-80 rounded-lg p-6 lg:p-7 ${
 								indexPrice === 1 ? 'border-second bg-second-beta' : 'border-black border-2'
 							}`}>
 								<div>
 									<div className="flex items-center justify-between">
-									<h2 className="text-4xl f-bold">{priceItem.title}</h2>
+									<h2 className="text-2xl lg:text-4xl f-bold">{priceItem.title}</h2>
 										{
 											indexPrice === 1 ?
 												(
@@ -60,7 +60,7 @@ function Pricing () {
 									<p className="text-sm mt-6">Lorem ipsum dolor sit amet consectet elitsed do eiusmod tempor.</p>
 								</div>
 								<div className="flex justify-between items-center">
-									<button className="f-bold text-sm border-black border-2 mt-4 px-7 lg:px-10 py-3 lg:py-5 guide-shadow-2 border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black">
+									<button className="f-bold text-sm border-black border-2 mt-4 px-5 lg:px-10 py-2 lg:py-5 guide-shadow-2 border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black">
 										SUBCRIBE
 									</button>
 									<div>
@@ -69,10 +69,10 @@ function Pricing () {
 									</div>
 								</div>
 							</div>
-							<div className={`border-black lg:mt-5 lg:h-80 rounded-lg lg:p-7 ${
+							<div className={`border-black mt-3 lg:mt-5 lg:h-80 rounded-lg p-6 lg:p-7 ${
 								indexPrice === 1 ? 'border-second bg-second-beta' : 'border-black border-2'
 							}`}>
-								<p className="lg:mb-5 text-sm f-bold">What' included:</p>
+								<p className="mb-2 lg:mb-5 text-sm f-bold">What' included:</p>
 								<ul>
 									{
 										priceItem.include.map((item, indexList) => (
