@@ -35,6 +35,8 @@ import Pricing from "./components/Pricing";
 import starInPricing from "./assets/pricing/star.svg";
 import vectorInPricing from "./assets/pricing/vector.svg";
 import groupInPricing from "./assets/pricing/group.svg";
+import Articles from './components/Articles'
+import vectorInArticles from './assets/articles/Vector.svg'
 
 function App() {
   const firstRowInHeader = () => {
@@ -117,7 +119,7 @@ function App() {
           </p>
           <img
             src={starInAbout}
-            className="absolute w-20 opacity-75 lg:opacity-100 lg:w-auto left-60 lg:left-[665px] bottom-64 lg:bottom-[265px]"
+            className="absolute w-20 opacity-75 lg:opacity-100 lg:w-auto left-48 lg:left-[665px] bottom-64 lg:bottom-[265px]"
             alt="star"
           />
           <img
@@ -316,12 +318,12 @@ function App() {
         <FlexColThreeRows
           otherClass="mt-6 lg:mt-8 z-10 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
           firstRow={firstRowInArticle()}
-          secondRow={<Content />}
-          thirdRow={firstButton("BROWSE ALL EPISODES")}
+          secondRow={<Articles />}
+          thirdRow={firstButton("BROWSE ALL")}
         />
         <img
-          src={vectorInContent}
-          className="absolute w-14 top-40 z-0 opacity-50 lg:opacity-100 right-0 lg:w-auto lg:top-64 lg:right-14"
+          src={vectorInArticles}
+          className="absolute w-14 top-40 z-0 opacity-50 lg:opacity-100 left-10 lg:w-auto lg:top-72 lg:right-14"
           alt="vector"
         />
         <img
