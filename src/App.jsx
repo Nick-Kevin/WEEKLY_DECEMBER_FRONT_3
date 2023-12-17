@@ -123,6 +123,19 @@ function App() {
     )
   }
 
+  const firstRowInFeatures = () => {
+    return (
+      <>
+        <SectionHeader
+          title="Membership benefits"
+          vector={sparkleInTestimonials}
+          vectorClass="w-8 lg:w-auto bottom-14 lg:bottom-9 left-[-15px] lg:left-[-100px]"
+          subtitle="Become our sponsor and get all benefits"
+        />
+      </>
+    )
+  }
+
   return (
     <>
       <div className="relative">
@@ -163,11 +176,11 @@ function App() {
       </div>
       <div className="bg-white py-10 lg:py-28 relative">
         <FlexColThreeRows
-            otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
-            firstRow = {firstRowInAbout()}
-            secondRow = {secondRowInAbout()}
-            thirdRow = {thirdRowInAbout()}
-          />
+          otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
+          firstRow = {firstRowInAbout()}
+          secondRow = {secondRowInAbout()}
+          thirdRow = {thirdRowInAbout()}
+        />
           <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
       <div className="bg-alice-blue py-16 lg:py-40">
@@ -178,6 +191,14 @@ function App() {
           subtitle="Their experience throughout every platform"
         />
         <ControledSlider/>
+      </div>
+      <div className="lg:py-28">
+        <FlexColThreeRows
+          otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
+          firstRow = {firstRowInFeatures()}
+          secondRow = {secondRowInAbout()}
+          thirdRow = {thirdRowInAbout()}
+        />
       </div>
     </>
   )
