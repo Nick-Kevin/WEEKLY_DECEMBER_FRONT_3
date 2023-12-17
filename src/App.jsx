@@ -154,6 +154,17 @@ function App() {
     )
   }
 
+  const firstRowInArticle = () => {
+    return (
+      <>
+        <SectionHeader
+          title="Article and News"
+          subtitle="News, tips, tricks and more"
+        />
+      </>
+    )
+  }
+
   return (
     <>
       <div className="relative">
@@ -240,6 +251,16 @@ function App() {
         />
         <Pricing/>        
         <img src={vectorInPricing} className="absolute z-0 bottom-28 left-16" alt="star" />
+        <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
+      </div>
+      <div className="bg-white py-16 lg:py-28 relative">
+        <FlexColThreeRows
+          otherClass = "mt-6 lg:mt-8 z-10 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
+          firstRow = {firstRowInArticle()}
+          secondRow = {(<Content/>)}
+          thirdRow = {firstButton('BROWSE ALL EPISODES')}
+        />
+        <img src={vectorInContent} className="absolute w-14 top-40 z-0 opacity-50 lg:opacity-100 right-0 lg:w-auto lg:top-64 lg:right-14" alt="vector" />
         <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
     </>
