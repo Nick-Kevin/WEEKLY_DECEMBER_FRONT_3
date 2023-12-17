@@ -5,7 +5,7 @@ import Google from '../assets/header/covers-plateforms/google-podcast.svg'
 function CoverCard (props) {
     return (
         <div
-            className="relative rounded-xl flex bg-cover flex-col justify-between p-3 lg:p-6 h-[200px] w-[200px] lg:h-[360px] lg:w-[360px] overflow-hidden"
+            className={`${props.height} relative rounded-xl flex bg-cover flex-col justify-between p-3 lg:p-6 h-[200px] w-[200px] lg:h-[360px] lg:w-[360px] overflow-hidden`}
             style={{backgroundImage: `url("${props.bgUrl}")`}}
         >
             <div className="flex z-20 w-full gap-x-3 justify-end">

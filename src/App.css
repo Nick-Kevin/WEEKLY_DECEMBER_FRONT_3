@@ -87,6 +87,10 @@
   border: 1px solid rgba(0, 0, 0, 0.4);
 }
 
+.border-3 {
+  border: 2px solid black;
+}
+
 .bt-1 {
   border-top: var(--line);
 }

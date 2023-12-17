@@ -29,6 +29,7 @@ import ControledSlider from './components/ControledSlider'
 
 import sparkleInTestimonials from './assets/testimonials/Sparkle.svg'
 import Features from './components/Features'
+import Content from './components/Content'
 
 function App() {
   const firstRowInHeader = () => {
@@ -137,6 +138,17 @@ function App() {
     )
   }
 
+  const firstRowInContent = () => {
+    return (
+      <>
+        <SectionHeader
+          title="Recent Episodes"
+          subtitle="Available on your favorite platform"
+        />
+      </>
+    )
+  }
+
   return (
     <>
       <div className="relative">
@@ -199,6 +211,15 @@ function App() {
           otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
           firstRow = {firstRowInFeatures()}
           secondRow = {(<Features/>)}
+          thirdRow = {firstButton('SEE PRICING')}
+        />
+        <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
+      </div>
+      <div className="bg-alice-blue py-16 lg:py-28 relative">
+        <FlexColThreeRows
+          otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
+          firstRow = {firstRowInContent()}
+          secondRow = {(<Content/>)}
           thirdRow = {firstButton('SEE PRICING')}
         />
         <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
