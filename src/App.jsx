@@ -183,7 +183,7 @@ function App() {
         />
           <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
-      <div className="bg-alice-blue py-16 lg:py-40">
+      <div className="bg-alice-blue py-16 lg:py-40 relative">
         <SectionHeader
           title="What our listeners say"
           vector={sparkleInTestimonials}
@@ -191,14 +191,16 @@ function App() {
           subtitle="Their experience throughout every platform"
         />
         <ControledSlider/>
+        <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
-      <div className="lg:py-28">
+      <div className="lg:py-28 relative">
         <FlexColThreeRows
           otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
           firstRow = {firstRowInFeatures()}
           secondRow = {secondRowInAbout()}
           thirdRow = {thirdRowInAbout()}
         />
+        <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
     </>
   )
