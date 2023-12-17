@@ -31,6 +31,7 @@ import sparkleInTestimonials from './assets/testimonials/Sparkle.svg'
 import Features from './components/Features'
 import Content from './components/Content'
 import vectorInContent from './assets/contents/vector.svg'
+import Pricing from './components/Pricing'
 
 function App() {
   const firstRowInHeader = () => {
@@ -224,6 +225,16 @@ function App() {
           thirdRow = {firstButton('BROWSE ALL EPISODES')}
         />
         <img src={vectorInContent} className="absolute w-14 top-40 z-0 opacity-50 lg:opacity-100 right-0 lg:w-auto lg:top-64 lg:right-14" alt="vector" />
+        <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
+      </div>
+      <div className="bg-white py-16 lg:py-40 relative">
+        <SectionHeader
+          title="Become our sponsor"
+          vector={sparkleInTestimonials}
+          vectorClass="w-8 lg:w-auto bottom-14 lg:bottom-9 left-[-15px] lg:left-[-100px]"
+          subtitle="Get exclusive episodes, merch and more"
+        />
+        <Pricing/>
         <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
     </>

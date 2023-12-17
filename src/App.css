@@ -59,6 +59,14 @@
   background-color: var(--alice-blue);
 }
 
+.bg-second {
+  background-color: var(--second-color) !important;
+}
+
+.bg-second-beta {
+  background-color: rgba(205, 70, 49, 0.1);
+}
+
 .black {
   color: black;
 }
@@ -97,6 +105,10 @@
 
 .bb-1 {
   border-bottom: var(--line);
+}
+
+.border-second {
+  border: 2px solid var(--second-color) !important;
 }
 
 .guide-shadow {
