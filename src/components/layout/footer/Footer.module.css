@@ -1,13 +1,150 @@
-.footer{
-    @apply grid grid-cols-12 gap-5 bg-red-400;
+.footer {
+  @apply flex flex-col lg:flex-none lg:grid lg:grid-cols-12 gap-10 lg:gap-5 bg-white;
+  padding: 40px 30px;
+
+  @media (min-width: 768px) {
+    padding: 80px 40px;
+  }
+
+  @media (min-width: 1024px) {
     padding: 144px 140px 80px;
+  }
 }
 
-.footer__logo__heading{
-    @apply flex justify-between items-baseline;
+.footer__logo {
+  @apply lg:col-span-2 text-left flex flex-col gap-10;
+
+  @media (min-width: 768px) {
+    /* padding: 80px 40px; */
+  }
+
+  @media (min-width: 1024px) {
+    /* padding: 144px 140px 80px; */
+  }
 }
 
-.footer__logo_img{
-    width: 74px;
-    height: 74px;
+.footer__logo__heading {
+  @apply flex lg:grid  items-end grid-cols-2 gap-0 lg:gap-5;
+
+  @media (min-width: 1024px) {
+    /* padding: 144px 140px 80px; */
+  }
+}
+
+.footer__logo_img {
+  @apply col-span-1;
+  max-width: 74px;
+  max-height: 74px;
+}
+
+.footer__logo_copyright {
+  @apply col-span-1 text-left;
+}
+
+.footer__logo__description {
+  @apply font-medium;
+  font-size: 14px;
+  line-height: 160%;
+  margin-right: 0;
+
+  @media (min-width: 768px) {
+    /* padding: 80px 40px; */
+  }
+
+  @media (min-width: 1024px) {
+    margin-right: -40px;
+  }
+}
+
+.footer__logo__socialNetwork {
+  @apply flex;
+  gap: 25px;
+}
+
+.footer__second {
+  @apply lg:col-span-1 col-start-1 lg:col-start-5 text-left flex flex-col gap-5 font-medium;
+  line-height: 160%;
+}
+
+.footer__second_testimonials {
+  color: var(--second-color);
+}
+
+.footer__third {
+  @apply lg:col-span-1 col-start-1 lg:col-start-7 text-left flex flex-col gap-5 font-medium;
+}
+
+.footer__third_episodes {
+  color: var(--second-color);
+}
+
+.footer__last {
+  @apply lg:col-span-4 col-start-1 lg:col-start-9 text-left;
+}
+
+.footer_last__heading {
+  margin-bottom: 29px;
+}
+
+.footer__last_platforms {
+  @apply flex flex-col lg:flex-row gap-5 lg:justify-between;
+  margin-bottom: 60px;
+}
+
+.footer__last_platforms_googlePodcast {
+  width: 122px;
+  height: 22px;
+}
+
+.footer__last_platforms_spotify {
+  width: 80px;
+  height: 22px;
+}
+
+.footer__last_platforms_youtube {
+  width: 94px;
+  height: 22px;
+}
+
+.footer__last_app {
+  @apply flex flex-col gap-5;
+}
+
+.footer__last_app_appStore {
+  width: 36px;
+  height: 36px;
+}
+
+.footer__last_app_icon {
+  @apply flex gap-5;
+}
+
+.footer__last_app_playStore {
+  width: 36px;
+  height: 36px;
+}
+
+.footer__divider {
+  @apply col-span-12;
+  margin: 0 0 20px;
+  background-color: var(--davys-grey);
+  height: 1px;
+}
+
+.footer_copyrightContainer {
+  @apply col-span-12;
+  margin: 30px 0 0px;
+
+  @media (min-width: 1024px) {
+    margin: 137px 0 0px;
+  }
+}
+
+.footer__copyright {
+  @apply col-span-12 text-left text-xs font-medium;
+  line-height: 160%;
+}
+
+.footer__copyright__podOfCast {
+  color: var(--second-color);
 }
