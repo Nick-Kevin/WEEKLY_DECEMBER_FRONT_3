@@ -28,6 +28,7 @@ import vectorInAbout from './assets/about/vector.svg'
 import ControledSlider from './components/ControledSlider'
 
 import sparkleInTestimonials from './assets/testimonials/Sparkle.svg'
+import Features from './components/Features'
 
 function App() {
   const firstRowInHeader = () => {
@@ -197,7 +198,7 @@ function App() {
         <FlexColThreeRows
           otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
           firstRow = {firstRowInFeatures()}
-          secondRow = {secondRowInAbout()}
+          secondRow = {(<Features/>)}
           thirdRow = {thirdRowInAbout()}
         />
         <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
