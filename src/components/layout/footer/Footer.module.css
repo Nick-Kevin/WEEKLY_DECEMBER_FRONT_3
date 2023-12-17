@@ -1,0 +1,13 @@
+.footer{
+    @apply grid grid-cols-12 gap-5 bg-red-400;
+    padding: 144px 140px 80px;
+}
+
+.footer__logo__heading{
+    @apply flex justify-between items-baseline;
+}
+
+.footer__logo_img{
+    width: 74px;
+    height: 74px;
+}
