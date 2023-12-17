@@ -1,7 +1,15 @@
+:root {
+  --main-color: rgba(247, 237, 232, 1);
+  --second-color: rgba(205, 70, 49, 1);
+  --davys-grey: rgba(77, 77, 77, 1);
+  --pewter-blue: rgba(129, 173, 200, 1);
+  --alice-blue: rgba(237, 243, 247, 1);
+
+  --line: 1px solid black;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
   text-align: center;
 }
 
@@ -11,9 +19,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -39,4 +49,82 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.bg-main-color, body {
+  background-color: var(--main-color);
+}
+
+.bg-alice-blue {
+  background-color: var(--alice-blue);
+}
+
+.bg-second {
+  background-color: var(--second-color) !important;
+}
+
+.bg-second-beta {
+  background-color: rgba(205, 70, 49, 0.1);
+}
+
+.black {
+  color: black;
+}
+
+.red-text {
+  color: var(--second-color);
+}
+
+.grey-text, p {
+  color: var(--davys-grey);
+}
+
+.pewter-blue-text {
+  color: var(--pewter-blue);
+}
+
+.none-border {
+  border: none !important;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.border-1 {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.border-3 {
+  border: 2px solid black;
+}
+
+.bt-1 {
+  border-top: var(--line);
+}
+
+.bb-1 {
+  border-bottom: var(--line);
+}
+
+.border-second {
+  border: 2px solid var(--second-color) !important;
+}
+
+.guide-shadow {
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25)
+}
+
+.guide-shadow-2 {
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.blue-shadow {
+  box-shadow: 10px 10px 0px 0px var(--pewter-blue);
+}
+
+@media (max-width:768px) {
+  .blue-shadow {
+    box-shadow: none;
+  }  
 }
