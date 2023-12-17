@@ -60,17 +60,19 @@ function Content () {
 		},		
 	]
 	return (
-		<div className="grid lg:grid-cols-2 lg:mx-32 lg:gap-x-8 lg:gap-y-8">
+		<div className="grid lg:grid-cols-2 mx-4 lg:mx-32 lg:gap-x-5 gap-y-5 lg:gap-y-8">
 			{
 				card.map((item, index) => (
 					<>
-						<div className="bg-white p-5 rounded-xl border-3">
+						<div className={`bg-white py-4 px-6 lg:py-5 lg:px-3 rounded-xl border-3 ${
+							index === 0 || index === 4 || index === 3 ? 'blue-shadow' : ''
+						}`}>
 							<div className="flex flex-col lg:gap-x-5 items-center lg:flex-row lg:justify-between">
 								<img src={item.image} alt="content"/>
-			                    <div className="flex flex-col gap-y-2">
+			                    <div className="flex flex-col gap-y-2 mt-4 lg:mt-0">
 			                    	<p className="text-start text-sm f-bold red-text">{item.eps}</p>
 			                    	<h3
-			                    		className={`bb-1 f-bold text-lg text-start ${
+			                    		className={`bb-1 pb-4 f-bold text-xl text-start ${
 			                    			index === 0 || index === 4 || index === 3 ? 'red-text' : 'text-black'
 			                    		}`}
 			                    	>
@@ -79,17 +81,17 @@ function Content () {
 			                    	<p className="text-start text-sm">{item.lorem}</p>
 			                    </div>
 							</div>
-							<div className="flex justify-between mt-6">
-								<div className="flex">
-									<button>
+							<div className="flex flex-col lg:flex-row justify-between mt-6 gap-y-6 lg:gap-y-0">
+								<div className="flex w-full justify-between lg:justify-start">
+									<button className="bg-transparent text-xs border-black hover:border-black hover:bg-black hover:text-white rounded-md lg:mr-2">
 										{item.btn1}
 									</button>
 									{
 										item.btn2 ?
 											(
 												<>
-													<button>
-														{item.btn1}
+													<button className="bg-transparent text-xs border-black hover:border-black hover:bg-black hover:text-white rounded-md">
+														{item.btn2}
 													</button>
 												</>
 											)
@@ -97,8 +99,8 @@ function Content () {
 											''
 									}
 								</div>
-								<div  className="flex">
-									<p>Hosted by:</p>
+								<div  className="flex w-full justify-end items-center">
+									<p className="mr-2 text-xs f-bold">Hosted by:</p>
 									<img src={host} alt="hosted"/>
 								</div>
 							</div>
