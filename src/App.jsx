@@ -24,7 +24,7 @@ import illustration2 from './assets/about/Illustration-2.svg'
 import johnSmith from './assets/about/avatar.png'
 import spotifyLogo2 from './assets/about/Spotify.svg'
 import starInAbout from './assets/about/Star.png'
-import vectorInAbout from './assets/about/vector.svg'
+import vectorInAbout from './assets/about/Vector.svg'
 
 function App() {
   const firstRowInHeader = () => {
