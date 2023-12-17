@@ -51,11 +51,11 @@ function App() {
     )
   }
 
-  const thirdRowInHeader = () => {
+  const firstButton = (label) => {
     return (
       <Button 
         className="f-bold text-sm border-black border-2 mt-4 px-7 lg:px-10 py-3 lg:py-5 guide-shadow-2 border-solid text-white bg-black lg:inline-block hover:bg-transparent hover:text-black hover:border-black"
-        label="SUBSCRIBE"
+        label={label}
       />
     )
   }
@@ -146,7 +146,7 @@ function App() {
             otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-7 relative z-20 lg:gap-y-10"
             firstRow = {firstRowInHeader()}
             secondRow = {secondRowInHeader()}
-            thirdRow = {thirdRowInHeader()}
+            thirdRow = {firstButton('SUBSRCIBE')}
           />
           <img
             src = {ShapeWirl}
@@ -194,12 +194,12 @@ function App() {
         <ControledSlider/>
         <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
-      <div className="lg:py-28 relative">
+      <div className="py-16 lg:py-28 relative">
         <FlexColThreeRows
           otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
           firstRow = {firstRowInFeatures()}
           secondRow = {(<Features/>)}
-          thirdRow = {thirdRowInAbout()}
+          thirdRow = {firstButton('SEE PRICING')}
         />
         <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
