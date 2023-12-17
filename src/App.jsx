@@ -25,6 +25,9 @@ import johnSmith from './assets/about/avatar.png'
 import spotifyLogo2 from './assets/about/Spotify.svg'
 import starInAbout from './assets/about/Star.png'
 import vectorInAbout from './assets/about/vector.svg'
+import ControledSlider from './components/ControledSlider'
+
+import sparkleInTestimonials from './assets/testimonials/Sparkle.svg'
 
 function App() {
   const firstRowInHeader = () => {
@@ -156,15 +159,25 @@ function App() {
             <img src={youtubeLogo} className="w-16 lg:w-auto" alt="logo youtube" />
           </div>        
         </div>
-        <img src={curlVector} className="absolute bottom-[-75px] left-[47%] lg:bottom-[-205px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
+        <img src={curlVector} className="absolute z-20 bottom-[-75px] left-[47%] lg:bottom-[-205px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
-      <div className="bg-white py-10 lg:py-28">
+      <div className="bg-white py-10 lg:py-28 relative">
         <FlexColThreeRows
             otherClass = "mt-6 lg:mt-8 lg:mt-11 gap-y-12 relative z-20 lg:gap-y-28"
             firstRow = {firstRowInAbout()}
             secondRow = {secondRowInAbout()}
             thirdRow = {thirdRowInAbout()}
           />
+          <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
+      </div>
+      <div className="bg-alice-blue py-16 lg:py-40">
+        <SectionHeader
+          title="What our listeners say"
+          vector={sparkleInTestimonials}
+          vectorClass="w-8 lg:w-auto bottom-14 lg:bottom-9 left-[-15px] lg:left-[-100px]"
+          subtitle="Their experience throughout every platform"
+        />
+        <ControledSlider/>
       </div>
     </>
   )
