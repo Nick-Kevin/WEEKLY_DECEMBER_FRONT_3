@@ -34,12 +34,12 @@ function Pricing () {
 		},
 	]
 	return (
-		<div className="grid lg:grid-cols-3 mx-4 lg:mx-32 lg:gap-x-5">
+		<div className="grid lg:grid-cols-3 mx-4 lg:mx-32 lg:gap-x-5 lg:mt-20 relative z-20">
 				{
 					pricing.map((priceItem, indexPrice) => (
 						<div key={indexPrice} className="text-start mt-8 lg:mt-0">
-							<div className={`flex flex-col justify-between border-black lg:mt-5 lg:h-80 rounded-lg p-6 lg:p-7 ${
-								indexPrice === 1 ? 'border-second bg-second-beta' : 'border-black border-2'
+							<div className={`flex flex-col justify-between border-black relative !z-20 lg:mt-5 lg:h-80 rounded-lg p-6 lg:p-7 ${
+								indexPrice === 1 ? 'border-second bg-second-beta' : 'border-black border-2 bg-white'
 							}`}>
 								<div>
 									<div className="flex items-center justify-between">
@@ -69,8 +69,8 @@ function Pricing () {
 									</div>
 								</div>
 							</div>
-							<div className={`border-black mt-3 lg:mt-5 lg:h-80 rounded-lg p-6 lg:p-7 ${
-								indexPrice === 1 ? 'border-second bg-second-beta' : 'border-black border-2'
+							<div className={`border-black mt-3 relative z-10 lg:mt-5 lg:h-80 rounded-lg p-6 lg:p-7 ${
+								indexPrice === 1 ? 'border-second bg-second-beta' : 'border-black border-2 bg-white'
 							}`}>
 								<p className="mb-2 lg:mb-5 text-sm f-bold">What' included:</p>
 								<ul>

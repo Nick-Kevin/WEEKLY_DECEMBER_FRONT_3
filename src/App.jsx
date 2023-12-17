@@ -32,6 +32,9 @@ import Features from './components/Features'
 import Content from './components/Content'
 import vectorInContent from './assets/contents/vector.svg'
 import Pricing from './components/Pricing'
+import starInPricing from './assets/pricing/star.svg'
+import vectorInPricing from './assets/pricing/vector.svg'
+import groupInPricing from './assets/pricing/group.svg'
 
 function App() {
   const firstRowInHeader = () => {
@@ -228,13 +231,15 @@ function App() {
         <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
       <div className="bg-white py-16 lg:py-40 relative">
+        <img src={starInPricing} className="absolute opacity-0 lg:opacity-100 z-0 top-80 right-10" alt="star" />
         <SectionHeader
           title="Become our sponsor"
-          vector={sparkleInTestimonials}
+          vector={groupInPricing}
           vectorClass="w-8 lg:w-auto bottom-14 lg:bottom-9 left-[-15px] lg:left-[-100px]"
           subtitle="Get exclusive episodes, merch and more"
         />
-        <Pricing/>
+        <Pricing/>        
+        <img src={vectorInPricing} className="absolute z-0 bottom-28 left-16" alt="star" />
         <img src={curlVector} className="absolute z-20 bottom-[-30px] left-[47%] lg:bottom-[-80px] lg:left-[49%] w-4 lg:w-auto" alt="vector" />
       </div>
     </>
