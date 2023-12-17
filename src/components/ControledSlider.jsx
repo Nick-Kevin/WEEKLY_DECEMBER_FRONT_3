@@ -1,97 +1,61 @@
 import { Swiper, SwiperSlide } from "swiper/react"
+import SlideNavButtons from './SlideNavButtons'
 
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/free-mode"
 
-import { FreeMode, Pagination, Navigation } from "swiper/modules"
+import { Pagination, Navigation } from "swiper/modules"
 
-import CoverCard from "./CoverCard"
-
-import Tesla from '../assets/header/covers/tesla-autopilot/cover.png'
-import TeslaVector from '../assets/header/covers/tesla-autopilot/vector.png'
-
-import Self from '../assets/header/covers/self-confidence/cover.png'
-import SelfVector from '../assets/header/covers/self-confidence/vector.png'
-
-import PMind from '../assets/header/covers/preplexed-mind/cover.png'
-import PMindVector from '../assets/header/covers/preplexed-mind/vector.png'
-
-import Womens from '../assets/header/covers/womens-rights/cover.png'
-import WomensVector from '../assets/header/covers/womens-rights/vector.png'
-
-import Social from '../assets/header/covers/social-class/cover.png'
-import SocialVector from '../assets/header/covers/social-class/vector.png'
-
-import Covid from '../assets/header/covers/covid19-endemic/cover.png'
-import CovidVector from '../assets/header/covers/covid19-endemic/vector.png'
+import luna from '../assets/testimonials/luna-lovegood.png'
+import emily from '../assets/testimonials/emily-blunt.png'
+import mia from '../assets/testimonials/mia-winters.png'
+import spotifyLogo from '../assets/header/logos/Spotify.svg'
+import googlePodcastLogo from '../assets/header/logos/Google-Podcast.svg'
+import youtubeLogo from '../assets/header/logos/Youtube.svg'
 
 function ControledSlider () {
+    const listeners = [
+        { id: 0, avatar: luna, alias: 'Luna lovegood', podcast: spotifyLogo, podcastClass: 'w-20 ml-2' },
+        { id: 1, avatar: emily, alias: 'Emily Blunt', podcast: googlePodcastLogo, podcastClass: 'w-40 ml-2' },
+        { id: 2, avatar: mia, alias: 'Mia Winters', podcast: youtubeLogo, podcastClass: 'w-16 ml-2' },
+    ]
     return (
         <div className="flex items-center justify-center mt-12 lg:mt-28 flex-col">
             <Swiper
+                slidesPerView={1}
+                spaceBetween={15}
                 breakpoints={{
-                    10: {
-                      slidesPerView: 1.57,
-                      spaceBetween: 15,
-                    },
-                    1024: {
-                      slidesPerView: 3.2,
-                      spaceBetween: 0,
-                    },
+                    1080: { slidesPerView: 2},
                 }}
-                freeMode={true}
-                modules={[FreeMode, Pagination, Navigation]}
-                className="max-w-[100%] lg:max-w-[100%] px-4 lg:px-9"
+                modules={[ Pagination, Navigation]}
+                className="max-w-[100%] lg:max-w-[100%] px-4 lg:px-32"
             >
-                <SwiperSlide>
-                    <CoverCard
-                        bgUrl={Tesla}
-                        vector={TeslaVector}
-                        vectorWidth="w-40 lg:w-auto"
-                        title="Tesla Autopilot"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CoverCard
-                        bgUrl={Self}
-                        vector={SelfVector}
-                        vectorWidth="w-28 z-0 lg:w-auto absolute left-14 top-4 top-0 lg:left-28 lg:top-10"
-                        title="Self-confidence"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CoverCard
-                        bgUrl={PMind}
-                        vector={PMindVector}
-                        vectorWidth="w-20 lg:w-36 ml-12 mt-2 lg:ml-[80px] lg:mt-4"
-                        title="Perplexed Mind"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CoverCard
-                        bgUrl={Womens}
-                        vector={WomensVector}
-                        vectorWidth="w-48 z-0 lg:w-auto absolute left-0 top-0"
-                        title="Womens Rights"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CoverCard
-                        bgUrl={Social}
-                        vector={SocialVector}
-                        vectorWidth="w-48 lg:w-auto mt-4 lg:mt-6"
-                        title="Social Class"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CoverCard
-                        bgUrl={Covid}
-                        vector={CovidVector}
-                        vectorWidth="w-40 lg:w-auto"
-                        title="Covid-19 Endemic"
-                    />
-                </SwiperSlide>
+                { listeners.map((listener) => (
+                    <>
+                        <SwiperSlide key={listener.id}>
+                            <div className="p-10 rounded-lg bg-white">
+                                <h3 className="lg:text-7xl f-bold text-start text-6xl red-text">“</h3>
+                                <h3 className="text-start text-lg lg:text-xl leading-relaxed">
+                                    Lorem ipsum dolor sit amet consectet 
+                                    piscing elit, sed do eiusmod tempor incidi ut labore
+                                    et dolore magna aliqua.
+                                </h3>
+                                <div className="flex items-center mt-6">
+                                    <img src={listener.avatar} alt="avatar"/>
+                                    <p className="ml-2">{listener.alias},</p>
+                                    <img
+                                        src={listener.podcast}
+                                        className={listener.podcastClass}
+                                        alt="podcast"
+                                    />
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    </>
+                    ))
+                }
+                <SlideNavButtons/>
             </Swiper>
         </div>
     )
