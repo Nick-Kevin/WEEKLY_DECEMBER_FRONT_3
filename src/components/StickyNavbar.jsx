@@ -8,7 +8,7 @@ import {
   IconButton,
   Card,
 } from "@material-tailwind/react";
-import Dropdown from "./dropdown";
+import Dropdown from "./Dropdown";
  
 export default function StickyNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
